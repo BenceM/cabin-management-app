@@ -36,10 +36,10 @@ function App() {
 		),
 	);
 	return (
-		<>
+		<div>
 			<GlobalStyles />
-			<RouterProvider router={router}></RouterProvider>;
-		</>
+			<RouterProvider router={router} />;
+		</div>
 	);
 }
 
