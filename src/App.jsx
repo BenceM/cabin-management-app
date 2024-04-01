@@ -22,15 +22,14 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 const queryClient = new QueryClient({
 	defaultOptions: {
 		queries: {
-			staleTime: 60 * 1000,
+			staleTime: 0,
 		},
 	},
 });
 function App() {
 	const router = createBrowserRouter(
 		createRoutesFromElements(
-			<QueryClientProvider client={queryClient}>
-				<ReactQueryDevtools initialIsOpen={false} />
+			<>
 				<Route element={<AppLayout />}>
 					<Route index element={<Navigate replace to="dashboard" />} />
 					<Route path="dashboard" element={<Dashboard />} />
@@ -40,16 +39,19 @@ function App() {
 					<Route path="settings" element={<Settings />} />
 					<Route path="account" element={<Account />} />
 				</Route>
-
 				<Route path="login" element={<Login />} />
 				<Route path="*" element={<PageNotFound />} />
-			</QueryClientProvider>,
+			</>,
 		),
 	);
 	return (
 		<div>
 			<GlobalStyles />
-			<RouterProvider router={router} />;
+			<QueryClientProvider client={queryClient}>
+				<ReactQueryDevtools initialIsOpen={false} />
+				<RouterProvider router={router} />;
+			</QueryClientProvider>
+			,
 		</div>
 	);
 }
