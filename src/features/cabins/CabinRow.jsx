@@ -72,7 +72,11 @@ function CabinRow({ cabin }) {
 				<Cabin>{name}</Cabin>
 				<div className="">Fits up to {maxCapacity} guests</div>
 				<Price>{formatCurrency(regularPrice)}</Price>
-				<Discount>{formatCurrency(discount)}</Discount>
+				{discount ? (
+					<Discount>{formatCurrency(discount)}</Discount>
+				) : (
+					<span>--</span>
+				)}
 				<div>
 					<button onClick={() => setShowForm((show) => !show)}>Edit</button>
 					<button disabled={isDeleting} onClick={() => mutate(cabinId)}>
