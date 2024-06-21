@@ -63,7 +63,7 @@ const Empty = styled.p`
 const TableContext = createContext();
 function Table({ columns, children }) {
 	return (
-		<TableContext.Provider value={columns}>
+		<TableContext.Provider value={{ columns }}>
 			<StyledTable role="table">{children}</StyledTable>
 		</TableContext.Provider>
 	);
@@ -85,7 +85,13 @@ function Row({ children }) {
 		</StyledRow>
 	);
 }
-function Body({ children }) {}
+function Body({ data, render }) {
+	return (
+		<StyledBody>
+			{data?.map(render) ?? <Empty>No data to show</Empty>}
+		</StyledBody>
+	);
+}
 
 Table.Header = Header;
 Table.Row = Row;
