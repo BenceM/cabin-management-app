@@ -86,11 +86,9 @@ function Row({ children }) {
 	);
 }
 function Body({ data, render }) {
-	return (
-		<StyledBody>
-			{data?.map(render) ?? <Empty>No data to show</Empty>}
-		</StyledBody>
-	);
+	if (!data.length) return <Empty>No data to show at the moment</Empty>;
+
+	return <StyledBody>{data.map(render)}</StyledBody>;
 }
 
 Table.Header = Header;
