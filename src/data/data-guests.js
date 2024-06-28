@@ -131,11 +131,11 @@ export const guests = [
 		countryFlag: "https://flagcdn.com/fr.svg",
 	},
 	{
-		fullName: "Ramesh Patel",
-		email: "ramesh@gmail.com",
-		nationality: "India",
+		fullName: "Bence Meszaros",
+		email: "hmmm@gmail.com",
+		nationality: "Hungary",
 		nationalID: "9875412303",
-		countryFlag: "https://flagcdn.com/in.svg",
+		countryFlag: "https://flagcdn.com/hu.svg",
 	},
 	{
 		fullName: "Fatimah Al-Sayed",
@@ -201,11 +201,11 @@ export const guests = [
 		countryFlag: "https://flagcdn.com/ar.svg",
 	},
 	{
-		fullName: "Ibrahim Ahmed",
-		email: "ibrahim@yahoo.com",
-		nationality: "Nigeria",
+		fullName: "Bianka Szabo",
+		email: "biszo@yahoo.com",
+		nationality: "Hungary",
 		nationalID: "2345678009",
-		countryFlag: "https://flagcdn.com/ng.svg",
+		countryFlag: "https://flagcdn.com/hu.svg",
 	},
 	{
 		fullName: "Mei Chen",
