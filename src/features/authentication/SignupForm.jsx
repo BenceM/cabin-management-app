@@ -10,7 +10,7 @@ import SpinnerMini from "../../ui/SpinnerMini";
 // Email regex: /\S+@\S+\.\S+/
 
 function SignupForm() {
-	const { signup, isLoading } = useSignup;
+	const { signup, isLoading } = useSignup();
 	const { register, formState, getValues, handleSubmit, reset } = useForm();
 	const { errors } = formState;
 
