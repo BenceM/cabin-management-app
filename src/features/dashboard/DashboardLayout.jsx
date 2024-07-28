@@ -40,7 +40,7 @@ function DashboardLayout() {
 
 			<div className="">Activity of today</div>
 			<div className="">Stay durations</div>
-			<SalesChart />
+			<SalesChart bookings={bookings} numDays={numDays} />
 		</StyledDashboardLayout>
 	);
 }
