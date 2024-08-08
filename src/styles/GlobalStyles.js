@@ -207,6 +207,44 @@ img {
   filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
 }
 
+/* ¨SCROLLBAR */
+/* ugly scrollbar fixes */
+/* ::-webkit-scrollbar{   display: none;   scroll-behavior: smooth; } */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    scroll-behavior: smooth;
+}
+
+
+::-webkit-scrollbar-track {
+    background: transparent;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-grey-200);
+    border-radius: 10px;
+    transition: background-color 1s ease;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-grey-300);
+
+}
+
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
 /*
 FOR DARK MODE
 
