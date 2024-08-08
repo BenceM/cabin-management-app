@@ -17,7 +17,11 @@ const GlobalStyles = createGlobalStyle`
 /* Colors adapted from https://tailwindcss.com/docs/customizing-colors */
 
 :root {
+&,  &::before,
+&::after {
 
+  overflow:hidden;
+}
 
 &, &.light-mode{
 
