@@ -21,7 +21,6 @@ function DashboardLayout() {
 	const { confirmedStays, numDays, isLoading: isLoading2 } = useRecentStays();
 
 	const { cabins, isLoading: isLoading3 } = useCabins();
-
 	if (isLoading1 || isLoading2 || isLoading3) return <Spinner />;
 
 	// add charts and extra data
