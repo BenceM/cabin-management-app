@@ -90,7 +90,7 @@ function Toggle({ id }) {
 			x: window.innerWidth - rect.width - rect.x,
 			y: rect.height + rect.y + 8,
 		});
-		console.log(rect);
+
 		openId === "" || openId !== id ? open(id) : close();
 	}
 	return (

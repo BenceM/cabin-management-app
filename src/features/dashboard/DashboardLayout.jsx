@@ -24,7 +24,7 @@ function DashboardLayout() {
 	if (isLoading1 || isLoading2 || isLoading3) return <Spinner />;
 
 	// add charts and extra data
-	console.log(bookings);
+	bookings;
 	return (
 		<StyledDashboardLayout>
 			<Stats

@@ -50,7 +50,7 @@ export async function updateCurrentUser({ password, fullName, avatar }) {
 	if (password) updateData = password;
 	if (fullName) updateData = { data: { fullName } };
 	const { data, error } = await supabase.auth.updateUser(updateData);
-	console.log(data);
+
 	if (error) throw new Error(error.message);
 
 	if (!avatar) return data;
