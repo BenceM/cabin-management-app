@@ -15,7 +15,7 @@ import {
 	HiXMark,
 } from "react-icons/hi2";
 import { Navigate, useNavigate } from "react-router-dom";
-import { useCheckout } from "../check-in-out/useCheckOut";
+import { useCheckout } from "../check-in-out/useCheckout";
 import { useDeleteBooking } from "./useDeleteBooking";
 import Modal from "../../ui/Modal";
 import ConfirmDelete from "../../ui/ConfirmDelete";
