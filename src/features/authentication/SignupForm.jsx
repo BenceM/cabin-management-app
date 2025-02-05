@@ -15,6 +15,7 @@ function SignupForm() {
 	const { errors } = formState;
 
 	function onSubmit({ fullName, email, password }) {
+		throw new Error("On a test account");
 		signup(
 			{ fullName, email, password },
 			{

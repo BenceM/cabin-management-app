@@ -52,7 +52,8 @@ function UpdateUserDataForm() {
 					value={fullName}
 					onChange={(e) => setFullName(e.target.value)}
 					id="fullName"
-					disabled={isUpdating}
+					// disabled={isUpdating}
+					disabled
 				/>
 			</FormRow>
 			<FormRow label="Avatar image">
@@ -60,7 +61,8 @@ function UpdateUserDataForm() {
 					id="avatar"
 					accept="image/*"
 					onChange={(e) => setAvatar(e.target.files[0])}
-					disabled={isUpdating}
+					// disabled={isUpdating}
+					disabled
 				/>
 			</FormRow>
 			<FormRow>
@@ -72,7 +74,12 @@ function UpdateUserDataForm() {
 				>
 					Cancel
 				</Button>
-				<Button disabled={isUpdating}>Update account</Button>
+				<Button
+					disabled
+					//  disabled={isUpdating}
+				>
+					Update account
+				</Button>
 			</FormRow>
 		</Form>
 	);
